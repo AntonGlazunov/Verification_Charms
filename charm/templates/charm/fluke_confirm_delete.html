@@ -9,7 +9,7 @@
                         <h5 class="card-title">Хотите удалить FLuke: {{ object.serial_number }}? </h5>
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger active">Удалить</button>
-                        <a href="{% url 'mailing:mailing_list' %}" class="btn btn-success active">Отмена</a>
+                        <a href="{% url 'charm:fluke_list' %}" class="btn btn-success active">Отмена</a>
                     </div>
                 </div>
             </form>

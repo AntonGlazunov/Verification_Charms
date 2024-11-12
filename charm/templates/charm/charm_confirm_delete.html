@@ -1,4 +1,4 @@
-{% extends 'mailing/base.html' %}
+{% extends 'charm/base.html' %}
 
 {% block content %}
     <div class="row">
@@ -6,7 +6,7 @@
             <form method="post">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Хотите удалить поверку от: ? </h5>
+                        <h5 class="card-title">Хотите удалить FLuke: {{ object.serial_number }}? </h5>
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger active">Удалить</button>
                         <a href="{% url 'charm:charm_list' %}" class="btn btn-success active">Отмена</a>

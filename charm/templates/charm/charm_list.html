@@ -1,0 +1,19 @@
+{% extends 'charm/base.html' %}
+
+{% block content %}
+{% for object in object_list %}
+<div class="col">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title">Fluke8846A</h5>
+            <p class="card-text"> Серийный номер: {{ object.serial_number }} </p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="{% url 'charm:charm_detail' object.pk %}" class="btn btn-primary">Детали</a>
+                <a href="{% url 'charm:fluke_update' object.pk %}" class="btn btn-primary">Редактировать</a>
+                <a href="{% url 'charm:fluke_delete' object.pk %}" class="btn btn-danger">Удалить</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
