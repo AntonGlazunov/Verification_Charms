@@ -16,6 +16,14 @@
                         <a class="nav-link active" aria-current="page"
                            href="{% url 'charm:fluke_list' %}"> Эталоны </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="{% url 'charm:connection_create' %}"> Подключиться к эталону </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                           href="{% url 'charm:fluke_create' %}"> Добавить эталон </a>
+                    </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"

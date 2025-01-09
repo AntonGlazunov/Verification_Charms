@@ -17,4 +17,4 @@ class RegisterView(CreateView):
 
 class UserLoginView(LoginView):
     form_class = AuthenticationForm
-    success_url = reverse_lazy()
+    success_url = reverse_lazy('charm:charm_list')

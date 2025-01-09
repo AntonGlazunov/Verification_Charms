@@ -1,0 +1,31 @@
+{% extends 'charm/base.html' %}
+
+{% block content %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ ind }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="col-6">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="start"/>
+                    <button type="submit" class="btn btn-success">Success</button>
+                </form>
+            </div>
+            <div class="col-6">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="stop" value="stop"/>
+                    <button type="submit" class="btn btn-danger">danger</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
